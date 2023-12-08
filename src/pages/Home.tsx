@@ -6,18 +6,21 @@ export const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const toGame = () => {
-    navigate('/game')
-  }
+    navigate("/game");
+  };
 
   return (
-    <>
-      <div className="flex justify-center">
+    <div className="h-screen">
+      <div className="flex justify-center h-[60%]">
         <img src={Logo} alt="creature with a message" />
       </div>
-      <div>
+      <div className="h-[40%]">
         <p className="flex justify-center">Select Game Mode:</p>
         <div className="flex justify-around pt-8">
-          <div className="bg-red-500 rounded-lg w-[20%] h-36 flex justify-center items-center hover:cursor-pointer hover:bg-red-700" onClick={toGame}>
+          <div
+            className="bg-red-500 rounded-lg w-[20%] h-36 flex justify-center items-center hover:cursor-pointer hover:bg-red-700"
+            onClick={toGame}
+          >
             <p className="font-bold text-3xl">5 Minutes</p>
           </div>
           <div className="bg-red-500 rounded-lg w-[20%] h-36 flex justify-center items-center hover:cursor-pointer hover:bg-red-700">
@@ -28,6 +31,6 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Countdown } from "../components/Countdown";
 
 export const Game: React.FC = () => {
   return (
-    <div>Game</div>
-  )
-}
+    <div>
+      <Countdown initialSeconds={3} />
+    </div>
+  );
+};
