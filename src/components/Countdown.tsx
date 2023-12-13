@@ -32,13 +32,18 @@ export const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
   };
 
   if (seconds <= 0) {
-    return <p>Time's Up!</p>;
+    return (
+      <div className="flex justify-center">
+        <p className="text-7xl">Time's Up!</p>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <h1>Countdown Timer</h1>
-      <p>{formatTime(seconds)}</p>
+    <div className="flex justify-center">
+      <p className={seconds > 10 ? "text-7xl" : "text-7xl text-red-600"}>
+        {formatTime(seconds)}
+      </p>
     </div>
   );
 };

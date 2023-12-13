@@ -1,52 +1,53 @@
 import React from "react";
-import Small from "../assets/cardTypes/small.JPG";
-import Medium from "../assets/cardTypes/medium.JPG";
-import Large from "../assets/cardTypes/large.JPG";
-import Habitat from "../assets/cardTypes/habitat.JPG";
-import Detail from "../assets/cardTypes/detail.JPG";
+import SmallFront from "../assets/cardTypes/smallFront.JPG";
+import MediumFront from "../assets/cardTypes/mediumFront.JPG";
+import LargeFront from "../assets/cardTypes/largeFront.JPG";
+import HabitatFront from "../assets/cardTypes/habitatFront.JPG";
+import DetailFront from "../assets/cardTypes/detailFront.JPG";
 
-interface CardProps {
+interface CardFrontProps {
   cardType: string;
 }
 
-export const Card: React.FC<CardProps> = ({ cardType }) => {
+export const CardFront: React.FC<CardFrontProps> = ({ cardType }) => {
   if (cardType === "small")
     return (
       <img
-        src={Small}
-        alt="small card back"
+        src={SmallFront}
+        alt="small card front"
         className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
       />
     );
   if (cardType === "medium")
     return (
       <img
-        src={Medium}
-        alt="medium card back"
+        src={MediumFront}
+        alt="medium card front"
+        border-black
         className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
       />
     );
   if (cardType === "large")
     return (
       <img
-        src={Large}
-        alt="large card back"
+        src={LargeFront}
+        alt="large card front"
         className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
       />
     );
   if (cardType === "habitat")
     return (
       <img
-        src={Habitat}
-        alt="habitat card back"
+        src={HabitatFront}
+        alt="habitat card front"
         className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
       />
     );
   if (cardType === "detail")
     return (
       <img
-        src={Detail}
-        alt="detail card back"
+        src={DetailFront}
+        alt="detail card front"
         className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
       />
     );
