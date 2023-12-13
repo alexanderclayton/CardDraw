@@ -1,9 +1,9 @@
 import React from "react";
-import Small from "../assets/cardTypes/small.jpg";
-import Medium from "../assets/cardTypes/medium.jpg";
-import Large from "../assets/cardTypes/large.jpg";
-import Habitat from "../assets/cardTypes/habitat.jpg";
-import Detail from "../assets/cardTypes/detail.jpg";
+import Small from "../assets/cardTypes/small.JPG";
+import Medium from "../assets/cardTypes/medium.JPG";
+import Large from "../assets/cardTypes/large.JPG";
+import Habitat from "../assets/cardTypes/habitat.JPG";
+import Detail from "../assets/cardTypes/detail.JPG";
 
 interface CardProps {
   cardType: string;
