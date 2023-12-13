@@ -18,10 +18,6 @@ export const Game: React.FC = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  if (time == undefined) {
-    return <p>No Time Limit!</p>;
-  }
-
   const cardTypes = ["small", "medium", "large", "habitat", "detail"];
 
   return (
@@ -36,7 +32,7 @@ export const Game: React.FC = () => {
           </div>
         ))}
       </div>
-      <Countdown initialSeconds={time} />
+      {time && <Countdown initialSeconds={time} />}
     </div>
   );
 };
