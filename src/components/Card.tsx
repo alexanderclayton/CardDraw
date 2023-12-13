@@ -11,13 +11,43 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ cardType }) => {
   if (cardType === "small")
-    return <img src={Small} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={Small}
+        alt="small card back"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
   if (cardType === "medium")
-    return <img src={Medium} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={Medium}
+        alt="medium card back"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
   if (cardType === "large")
-    return <img src={Large} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={Large}
+        alt="large card back"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
   if (cardType === "habitat")
-    return <img src={Habitat} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={Habitat}
+        alt="habitat card back"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
   if (cardType === "detail")
-    return <img src={Detail} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={Detail}
+        alt="detail card back"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
 };

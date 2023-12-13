@@ -11,13 +11,44 @@ interface CardFrontProps {
 
 export const CardFront: React.FC<CardFrontProps> = ({ cardType }) => {
   if (cardType === "small")
-  return <img src={SmallFront} alt="" className="w-36 h-48 object-cover" />;
-if (cardType === "medium")
-  return <img src={MediumFront} alt="" className="w-36 h-48 object-cover" />;
-if (cardType === "large")
-  return <img src={LargeFront} alt="" className="w-36 h-48 object-cover" />;
-if (cardType === "habitat")
-  return <img src={HabitatFront} alt="" className="w-36 h-48 object-cover" />;
-if (cardType === "detail")
-  return <img src={DetailFront} alt="" className="w-36 h-48 object-cover" />;
+    return (
+      <img
+        src={SmallFront}
+        alt="small card front"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
+  if (cardType === "medium")
+    return (
+      <img
+        src={MediumFront}
+        alt="medium card front"
+        border-black
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
+  if (cardType === "large")
+    return (
+      <img
+        src={LargeFront}
+        alt="large card front"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
+  if (cardType === "habitat")
+    return (
+      <img
+        src={HabitatFront}
+        alt="habitat card front"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
+  if (cardType === "detail")
+    return (
+      <img
+        src={DetailFront}
+        alt="detail card front"
+        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+      />
+    );
 };
