@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase/firebaseConfig";
 import { collection, getDocs, query } from "firebase/firestore";
-
-import SmallFront from "../assets/cardTypes/smallFront.JPG";
-import MediumFront from "../assets/cardTypes/mediumFront.JPG";
-import LargeFront from "../assets/cardTypes/largeFront.JPG";
-import HabitatFront from "../assets/cardTypes/habitatFront.JPG";
-import DetailFront from "../assets/cardTypes/detailFront.JPG";
 import { FirebaseError } from "firebase/app";
 
 interface CardFrontProps {
