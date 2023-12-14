@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/creatureslogo.jpg";
+import { Header } from "../components/Header";
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className="h-screen">
+      <Header />
       <div className="flex justify-center h-[60%]">
         <img src={Logo} alt="creature with a message" />
       </div>
