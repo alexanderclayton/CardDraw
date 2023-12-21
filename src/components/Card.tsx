@@ -10,44 +10,31 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ cardType }) => {
-  if (cardType === "small")
-    return (
-      <img
-        src={Small}
-        alt="small card back"
-        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
-      />
-    );
-  if (cardType === "medium")
-    return (
-      <img
-        src={Medium}
-        alt="medium card back"
-        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
-      />
-    );
-  if (cardType === "large")
-    return (
-      <img
-        src={Large}
-        alt="large card back"
-        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
-      />
-    );
-  if (cardType === "habitat")
-    return (
-      <img
-        src={Habitat}
-        alt="habitat card back"
-        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
-      />
-    );
-  if (cardType === "detail")
-    return (
-      <img
-        src={Detail}
-        alt="detail card back"
-        className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
-      />
-    );
+  let imageSrc;
+
+  switch (cardType) {
+    case "small":
+      imageSrc = Small;
+      break;
+    case "medium":
+      imageSrc = Medium;
+      break;
+    case "large":
+      imageSrc = Large;
+      break;
+    case "habitat":
+      imageSrc = Habitat;
+      break;
+    case "detail":
+      imageSrc = Detail;
+      break;
+  }
+
+  return (
+    <img
+      src={imageSrc}
+      alt="card back"
+      className="w-48 h-72 object-cover rounded-xl m-4 border-black border"
+    />
+  );
 };
