@@ -2,17 +2,17 @@ import React from "react";
 
 export const HowTo: React.FC = () => {
   return (
-    <div>
-      <div>
-        <p>Getting Started</p>
+    <div className="p-12">
+      <div className="pb-8">
+        <p className="text-3xl font-bold">Getting Started</p>
         <p>
           Playing is easy, and there are millions of ways to win! All you need
           is something to draw with and a piece of paper to draw on, we'll
           handle the rest.
         </p>
       </div>
-      <div>
-        <p>Objective</p>
+      <div className="pb-8">
+        <p className="text-3xl font-bold">Objective</p>
         <p>
           The objective of the game is to draw an animal that includes
           something, however big or small, from each of the 5 category cards.
@@ -20,27 +20,27 @@ export const HowTo: React.FC = () => {
           selected and flipped when the game begins. The 5 categories are as
           follows:
         </p>
-        <p>Small</p>
+        <p className="text-xl font-bold">Small</p>
         <p>
           Small cards feature small animals, from mosquitoes to vampire bats.
         </p>
-        <p>Medium</p>
+        <p className="text-xl font-bold">Medium</p>
         <p>
           Medium cards feature medium sized animals. Koalas, raccoons, and even
           pteradactyls are in this group.
         </p>
-        <p>Large</p>
+        <p className="text-xl font-bold">Large</p>
         <p>
           Large cards feature some of the largest animals on earth. They'll
           range in size from giraffes to blue whales.
         </p>
-        <p>Habitat</p>
+        <p className="text-xl font-bold">Habitat</p>
         <p>
           Habitat cards are the setting for your drawing. When the cards flip,
           you'll have to think about where your animal is in (or out of) this
           world. Habitat cards inlude the beach, a castle, and outter space
         </p>
-        <p>Detail</p>
+        <p className="text-xl font-bold">Detail</p>
         <p>
           Detail cards feature a specific detail you have to add to your
           drawing. Some require you to use only straight or squiggly lines,
@@ -48,8 +48,8 @@ export const HowTo: React.FC = () => {
           on your animal
         </p>
       </div>
-      <div>
-        <p>The Game</p>
+      <div className="pb-8">
+        <p className="text-3xl font-bold">The Game</p>
         <p>
           There are 3 game modes to choose from. Two include a time limit, and
           the third is an open-play, no time-limit mode. When a game mode is
@@ -60,7 +60,7 @@ export const HowTo: React.FC = () => {
           try to come up with a drawing that includes each of the 5 topic cards.
         </p>
       </div>
-      <div>Winning the Game</div>
+      <div className="text-3xl font-bold">Winning the Game</div>
       <p>
         Remember, there are millions of ways to win! Each time the cards flip,
         you draw the topics, and when you're finished you win the game! It' that

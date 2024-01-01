@@ -40,7 +40,7 @@ export const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center font-Caveat">
       <p className={seconds > 10 ? "text-7xl" : "text-7xl text-red-600"}>
         {formatTime(seconds)}
       </p>
