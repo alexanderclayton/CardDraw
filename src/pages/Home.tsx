@@ -11,11 +11,11 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       <div className="bg-green-600 transform -rotate-12 origin-top-left pt-12 pl-12 ml-[-4vh] pb-3">
         <Header />
       </div>
-      <div className="h-screen px-12 pt-12">
+      <div className="px-12">
         <div className="flex justify-center h-[60%]">
           <img src={Logo} alt="creature with a message" />
         </div>
