@@ -1,9 +1,8 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../assets/creatureslogo.jpg";
-import { Header } from "../components/Header";
+import { Logo } from "../assets";
+import { Header } from "../components";
 
-export const Home: React.FC = () => {
+export const Home = () => {
   const navigate = useNavigate();
 
   const toGame = (time: number | null) => {
@@ -11,11 +10,11 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen flex flex-col overflow-hidden">
       <div className="bg-green-600 transform -rotate-12 origin-top-left pt-12 pl-12 ml-[-4vh] pb-3">
         <Header />
       </div>
-      <div className="px-12">
+      <div className="px-12 flex-1 overflow-auto">
         <div className="flex justify-center h-[60%]">
           <img src={Logo} alt="creature with a message" />
         </div>

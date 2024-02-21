@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { storage, db } from "../firebase/firebaseConfig";
+import { useState } from "react";
+import { db, storage } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { FirebaseError } from "firebase/app";
 
-export const ConfigureGame: React.FC = () => {
+export const ConfigureGame = () => {
   const [imageUpload, setImageUpload] = useState<File | null>(null);
   const [imageType, setImageType] = useState<string>("small");
 

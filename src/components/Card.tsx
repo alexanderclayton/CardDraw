@@ -1,18 +1,14 @@
-import React from "react";
-import Small from "../assets/cardTypes/small.JPG";
-import Medium from "../assets/cardTypes/medium.JPG";
-import Large from "../assets/cardTypes/large.JPG";
-import Habitat from "../assets/cardTypes/habitat.JPG";
-import Detail from "../assets/cardTypes/detail.JPG";
+import { Detail, Habitat, Large, Medium, Small } from "../assets";
+
 
 interface CardProps {
-  cardType: string;
+  type: string;
 }
 
-export const Card: React.FC<CardProps> = ({ cardType }) => {
+export const Card = ({ type }: CardProps) => {
   let imageSrc;
 
-  switch (cardType) {
+  switch (type) {
     case "small":
       imageSrc = Small;
       break;

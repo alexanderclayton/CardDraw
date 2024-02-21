@@ -1,6 +1,6 @@
-import React from "react";
+//import//
 
-export const HowTo: React.FC = () => {
+export const HowTo = () => {
   return (
     <div className="p-12">
       <div className="pb-8">
