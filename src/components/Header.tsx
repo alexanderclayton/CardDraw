@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-export const Header: React.FC = () => {
+export const Header = () => {
   return (
     <nav className="font-Caveat text-3xl">
       {/* <Link to="/configure">Configure Game</Link> */}

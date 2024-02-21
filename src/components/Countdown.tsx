@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 interface CountdownProps {
   initialSeconds: number;
 }
 
-export const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
+export const Countdown = ({ initialSeconds }: CountdownProps) => {
   const [seconds, setSeconds] = useState<number>(initialSeconds);
 
   useEffect(() => {

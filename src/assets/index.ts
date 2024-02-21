@@ -1,0 +1,6 @@
+export {default as Detail} from './cardTypes/detail.JPG'
+export {default as Habitat} from './cardTypes/habitat.JPG'
+export {default as Large} from './cardTypes/large.JPG'
+export {default as Medium} from './cardTypes/medium.JPG'
+export {default as Small} from './cardTypes/small.JPG'
+export {default as Logo} from './creatureslogo.jpg'

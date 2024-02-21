@@ -1,38 +1,31 @@
-import React, { useState, useEffect } from "react";
-import ReactCardFlip from "react-card-flip";
 import { useLocation } from "react-router-dom";
-import { Countdown } from "../components/Countdown";
-import { Card } from "../components/Card";
-import { CardFront } from "../components/CardFront";
+import { CardFlip, Countdown } from "../components";
 
-export const Game: React.FC = () => {
+type TCard = {
+  type: string;
+  time: number;
+};
+
+export const Game = () => {
   const location = useLocation();
-  const time = location.state;
-  const [isFlipped, setIsFlipped] = useState(false);
+  const countdownTime = location.state;
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsFlipped(!isFlipped);
-    }, 1000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  const cardTypes = ["small", "medium", "large", "habitat", "detail"];
+  const cards: TCard[] = [
+    { type: "small", time: 1000 },
+    { type: "medium", time: 1300 },
+    { type: "large", time: 1600 },
+    { type: "habitat", time: 1900 },
+    { type: "detail", time: 2200 },
+  ];
 
   return (
     <div>
       <div className="flex flex-wrap justify-around">
-        {cardTypes.map((type) => (
-          <div key={type}>
-            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-              <Card cardType={type} />
-              <CardFront cardType={type} />
-            </ReactCardFlip>
-          </div>
+        {cards.map((card) => (
+          <CardFlip type={card.type} time={card.time} />
         ))}
       </div>
-      {time && <Countdown initialSeconds={time} />}
+      {countdownTime && <Countdown initialSeconds={countdownTime} />}
     </div>
   );
 };
